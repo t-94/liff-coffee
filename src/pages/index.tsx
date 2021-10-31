@@ -11,6 +11,9 @@ const Home: NextPage = (): JSX.Element => {
   useEffect(() => {
     setTimeout(() => {
       if (cancel) return;
+      const getCount: string | null = localStorage.getItem("count");
+      const count = getCount === null ? 0 : Number(getCount);
+      localStorage.setItem("count", `${count + 1}`);
       router.replace("/progress");
     }, 10000);
     return;
