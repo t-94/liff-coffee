@@ -1,13 +1,16 @@
 import type { NextPage } from "next";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import Progress from "../components/Progress";
 
 const Home: NextPage = (): JSX.Element => {
+  const [cancel, setCancel] = useState<boolean>(false);
+
   useEffect(() => {
     setTimeout(() => {
+      if (cancel) return;
       router.replace("/progress");
     }, 10000);
     return;
@@ -16,6 +19,7 @@ const Home: NextPage = (): JSX.Element => {
   const router = useRouter();
 
   const cancelOrder = () => {
+    setCancel(true);
     router.replace("/cancel");
   };
 

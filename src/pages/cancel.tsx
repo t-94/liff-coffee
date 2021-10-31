@@ -1,5 +1,5 @@
 const Cancel = () => (
-  <h2 style={{ textAlign: "center" }}>またのご利用をお待ちしております</h2>
+  <p style={{ textAlign: "center" }}>またのご利用をお待ちしております</p>
 );
 
 export default Cancel;
