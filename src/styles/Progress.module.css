@@ -1,0 +1,10 @@
+.wrap {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap p {
+  font-size: 20px;
+  font-weight: bold;
+}
