@@ -1,5 +1,5 @@
-const history = () => (
+const History = () => (
   <h2 style={{ textAlign: "center" }}>あとX回注文でお支払いです</h2>
 );
 
-export default history;
+export default History;

@@ -3,10 +3,9 @@ import styles from "../styles/Progress.module.css";
 import CoffeeCup from "../components/CoffeeCup";
 import { useRouter } from "next/router";
 
-const progress = () => {
-  const [sec, setSec] = useState<number>(15);
+const Progress = () => {
   const router = useRouter();
-
+  const [sec, setSec] = useState<number>(15);
   useEffect(() => {
     if (sec === 0) {
       router.replace("/history");
@@ -26,4 +25,4 @@ const progress = () => {
   );
 };
 
-export default progress;
+export default Progress;
